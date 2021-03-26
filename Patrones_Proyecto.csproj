@@ -6,8 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Chain of Responsability\" />
     <Folder Include="Observer\" />
+=======
+    <Folder Include="Flyweigth\" />
+    <Folder Include="State\" />
+>>>>>>> Fa
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿using Patrones_Proyecto.State;
 using Patrones_Proyecto.Flyweigth;
+=======
+﻿using Patrones_Proyecto.Chain_of_Responsability;
+using Patrones_Proyecto.Observer;
+>>>>>>> Fa
 using System;
 
 namespace Patrones_Proyecto
@@ -8,6 +13,7 @@ namespace Patrones_Proyecto
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Aeropuerto a = new Aeropuerto();
             Noticias n = new Noticias();
 
@@ -108,6 +114,20 @@ namespace Patrones_Proyecto
                         break;
                 }
             }
+=======
+            HandlerDirector director = new HandlerDirector();
+            HandlerJefe jefe = new HandlerJefe(director);
+            HandlerRevisor revisor = new HandlerRevisor(jefe);
+            HandlerEditor editor = new HandlerEditor(revisor);
+
+
+            Provincia arque = new Provincia("Arque");
+            Provincia mizque = new Provincia("Mizque");
+            Provincia arani = new Provincia("Arani");
+            Provincia Carrasco = new Provincia("Carrasco");
+            Provincia tiraque = new Provincia("Tiraque");
+
+>>>>>>> Fa
         }
     }
 }
