@@ -15,10 +15,10 @@ namespace Patrones_Proyecto.State
         private double max_Neblina = 3.5;
 
         public Aeropuerto ()
-        {
-            calcular_Valor_Lluvia();
-
+        { 
             Vuelos = new List<Vuelo>();
+            calcular_Valor_Lluvia();
+            calcular_Valor_Neblina();
         }
 
         public void crear_Vuelo()

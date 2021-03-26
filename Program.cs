@@ -57,7 +57,7 @@ namespace Patrones_Proyecto
                                     Console.WriteLine("Ingrese un valor valido");
                                     break;
                             }
-
+                            Console.ReadLine();
                             Console.Clear();
                         }
                         break;
@@ -88,7 +88,7 @@ namespace Patrones_Proyecto
                                     Console.WriteLine("Ingrese un valor valido");
                                     break;
                             }
-
+                            Console.ReadLine();
                             Console.Clear();
                         }
                         break;

@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Flyweigth\" />
     <Folder Include="Chain of Responsability\" />
-    <Folder Include="State\" />
     <Folder Include="Observer\" />
   </ItemGroup>
 
