@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 ﻿using Patrones_Proyecto.State;
 using Patrones_Proyecto.Flyweigth;
-=======
 ﻿using Patrones_Proyecto.Chain_of_Responsability;
 using Patrones_Proyecto.Observer;
->>>>>>> Fa
 using System;
 
 namespace Patrones_Proyecto
@@ -13,9 +10,25 @@ namespace Patrones_Proyecto
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
             Aeropuerto a = new Aeropuerto();
             Noticias n = new Noticias();
+            //
+            SistemaCentralRural SCR = new SistemaCentralRural();
+            Provincia arque = new Provincia("Arque");
+            Provincia mizque = new Provincia("Mizque");
+            Provincia arani = new Provincia("Arani");
+            Provincia Carrasco = new Provincia("Carrasco");
+            Provincia tiraque = new Provincia("Tiraque");
+            SCR.añadirProvicnias(Carrasco);
+            SCR.añadirProvicnias(arque);
+            SCR.añadirProvicnias(mizque);
+            SCR.añadirProvicnias(arani);
+            SCR.añadirProvicnias(tiraque);
+            //
+            HandlerDirector director = new HandlerDirector();
+            HandlerJefe jefe = new HandlerJefe(director);
+            HandlerRevisor revisor = new HandlerRevisor(jefe);
+            HandlerEditor editor = new HandlerEditor(revisor);
 
             string s = "s";
             int eleccion;
@@ -24,6 +37,8 @@ namespace Patrones_Proyecto
             {
                 Console.WriteLine("1.- State \n" +
                     "2.- Noticias \n" +
+                    "3.- Chain \n" +
+                    "4.- Observer \n" +
                     "5.- Terminar ejecucion");
 
                 eleccion = Convert.ToInt32(Console.ReadLine());
@@ -100,9 +115,17 @@ namespace Patrones_Proyecto
                         break;
 
                     case 3:
+
+                        Console.WriteLine("Ingrese La cantidad de palabras");
+                        int cant = Convert.ToInt32(Console.ReadLine());
+                        bool resp = editor.aprobarNoticia(cant);
                         break;
 
                     case 4:
+                        Console.WriteLine("ingrese titulo de la noticia");
+                        string c = Console.ReadLine();
+                        Observer.Noticia not = new Observer.Noticia(c);
+                        SCR.nuevaNoticia(not);
                         break;
 
                     case 5:
@@ -114,20 +137,9 @@ namespace Patrones_Proyecto
                         break;
                 }
             }
-=======
-            HandlerDirector director = new HandlerDirector();
-            HandlerJefe jefe = new HandlerJefe(director);
-            HandlerRevisor revisor = new HandlerRevisor(jefe);
-            HandlerEditor editor = new HandlerEditor(revisor);
+            
 
-
-            Provincia arque = new Provincia("Arque");
-            Provincia mizque = new Provincia("Mizque");
-            Provincia arani = new Provincia("Arani");
-            Provincia Carrasco = new Provincia("Carrasco");
-            Provincia tiraque = new Provincia("Tiraque");
-
->>>>>>> Fa
+            
         }
     }
 }
