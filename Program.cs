@@ -64,7 +64,7 @@ namespace Patrones_Proyecto
 
                     case 2:
                         int elec_3;
-                        while (eleccion == 1)
+                        while (eleccion == 2)
                         {
                             Console.WriteLine("Que desea hacer: \n" +
                                 "1.- Agregar Noticia \n" +
